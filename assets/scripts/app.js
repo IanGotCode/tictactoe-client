@@ -6,20 +6,31 @@
 // use require without a reference to ensure a file is bundled
 // require('./example')
 
-const currentPlayer = 'X'
+// playerOne and playerTwo
+const playerOne = 'X'
 const playerTwo = 'O'
 
+let currentTurn = 1
+let movesMade = 0
+
+let box = $('.box')
+
+// click function that shows whats happening
+box.on('click', function (e) {
+  movesMade += 1
+
+  if (currentTurn === 1) {
+    event.target.innerHTML = playerOne
+    event.target.style.color = 'white'
+    currentTurn += 1
+  } else {
+    event.target.innerHTML = playerTwo
+    event.target.style.color = 'white'
+    currentTurn -= 1
+  }
+})
+
 $(() => {
-  // all the ways the game can be won
-  const waysToWin = [
-    ['0', '1', '2'],
-    ['3', '4', '5'],
-    ['6', '7', '8'],
-    ['0', '4', '8'],
-    ['6', '4', '2'],
-    ['0', '3', '6'],
-    ['1', '4', '7'],
-    ['2', '5', '8']
-  ]
+
   // your JS code goes here
 })
