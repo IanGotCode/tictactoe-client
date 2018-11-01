@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Tic-Tac-Toe</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,6 +12,41 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <h1 class='game'>Tic Tac Toe</h1>
+
+      <!-- <form class="stack">
+        <input type="text" name="username" placeholder="username">
+        <input type="password" name="password" placeholder="password">
+        <input type="password" name="password" placeholder=" confirm password">
+        <button class=" sign-up btn btn-dark">Sign Up!</button>
+      </form>
+
+      <form>
+        <input type="text" name="username" placeholder="username">
+        <input type="password" name="password" placeholder="password">
+        <button class=" sign-in btn btn-dark">Sign In!</button>
+      </form> -->
+
+      <!-- <button class="btn btn-dark">Sign Out!</button> -->
+
+      <section class="board">
+        <div class="container">
+            <div class="grid remove-border-top remove-border-left"></div>
+            <div class="grid remove-border-top"></div>
+            <div class="grid remove-border-top remove-border-right"></div>
+            <div class="grid remove-border-left"></div>
+            <div class="grid"></div>
+            <div class="grid remove-border-right"></div>
+            <div class="grid remove-border-bottom remove-border-left"></div>
+            <div class="grid remove-border-bottom"></div>
+            <div class="grid remove-border-bottom remove-border-right"></div>
+        </div>
+      </section>
+
+      <div class="text-center newGame">
+        <input type="button" value="New Game?" class="btn btn-dark">
+      </div>
+
+
     </body>
 </html>

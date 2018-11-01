@@ -1,1 +1,55 @@
 @import '~bootstrap/scss/bootstrap';
+body{
+    background-color: black;
+}
+
+.game {
+  text-align: center;
+  font-size: 75px;
+  color: white;
+}
+
+.board {
+  background-color: #23272B;
+  width: 500px;
+  padding: 25px;
+  margin: 15px auto;
+  border-radius: 45px;
+}
+
+.stock {
+  display: block;
+}
+.container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  height: 30vw;
+  width: 35vw;
+}
+
+.grid {
+  border: 1px solid white;
+  outline: none;
+  cursor: pointer;
+}
+
+.newGame {
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.remove-border-top {
+  border-top: none;
+}
+
+.remove-border-left {
+  border-left: none;
+}
+
+.remove-border-right {
+  border-right: none;
+}
+
+.remove-border-bottom {
+  border-bottom: none;
+}
