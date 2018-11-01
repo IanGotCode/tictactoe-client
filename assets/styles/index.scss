@@ -1,4 +1,5 @@
 @import '~bootstrap/scss/bootstrap';
+
 body{
     background-color: black;
 }
@@ -29,13 +30,7 @@ body{
 
 .grid {
   border: 1px solid white;
-  outline: none;
   cursor: pointer;
-}
-
-.newGame {
-  margin: 0 auto;
-  padding: 20px;
 }
 
 .remove-border-top {
@@ -52,4 +47,9 @@ body{
 
 .remove-border-bottom {
   border-bottom: none;
+}
+
+.newGame {
+  margin: 0 auto;
+  padding: 20px;
 }
