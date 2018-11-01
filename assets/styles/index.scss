@@ -1,55 +1,64 @@
 @import '~bootstrap/scss/bootstrap';
 
-body{
-    background-color: black;
+body {
+  background-color: black;
+  height: 100%;
 }
 
 .game {
   text-align: center;
-  font-size: 75px;
   color: white;
 }
 
+.flex-container {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flip-wrap {
+  flex: wrap;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.game-board {
+  height: 100%;
+  width: 100%;
+}
+
 .board {
-  background-color: #23272B;
-  width: 500px;
-  padding: 25px;
-  margin: 15px auto;
-  border-radius: 45px;
+  width: 600px;
 }
 
-.stock {
-  display: block;
-}
-.container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  height: 30vw;
-  width: 35vw;
-}
-
-.grid {
+.box {
+  height: 200px;
+  width: 200px;
   border: 1px solid white;
-  cursor: pointer;
 }
 
-.remove-border-top {
-  border-top: none;
-}
-
-.remove-border-left {
+.remove-left {
   border-left: none;
 }
 
-.remove-border-right {
+.remove-right {
   border-right: none;
 }
 
-.remove-border-bottom {
+.remove-top {
+  border-top: none;
+}
+
+.remove-bottom {
   border-bottom: none;
 }
 
-.newGame {
-  margin: 0 auto;
-  padding: 20px;
+
+.box:hover {
+  background-color: white;
 }

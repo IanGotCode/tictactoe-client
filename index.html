@@ -12,41 +12,25 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
+
       <h1 class='game'>Tic Tac Toe</h1>
 
-      <!-- <form class="stack">
-        <input type="text" name="username" placeholder="username">
-        <input type="password" name="password" placeholder="password">
-        <input type="password" name="password" placeholder=" confirm password">
-        <button class=" sign-up btn btn-dark">Sign Up!</button>
-      </form>
-
-      <form>
-        <input type="text" name="username" placeholder="username">
-        <input type="password" name="password" placeholder="password">
-        <button class=" sign-in btn btn-dark">Sign In!</button>
-      </form> -->
-
-      <!-- <button class="btn btn-dark">Sign Out!</button> -->
-
-      <section class="board">
-        <div class="container">
-            <div class="grid remove-border-top remove-border-left"></div>
-            <div class="grid remove-border-top"></div>
-            <div class="grid remove-border-top remove-border-right"></div>
-            <div class="grid remove-border-left"></div>
-            <div class="grid"></div>
-            <div class="grid remove-border-right"></div>
-            <div class="grid remove-border-bottom remove-border-left"></div>
-            <div class="grid remove-border-bottom"></div>
-            <div class="grid remove-border-bottom remove-border-right"></div>
+      <div class="game-board flex-container flex-column flex-center">
+        <div class="board flex-container flex-wrap">
+          <div class="box remove-left remove-top"></div>
+          <div class="box remove-top"></div>
+          <div class="box remove-top remove-right"></div>
         </div>
-      </section>
-
-      <div class="text-center newGame">
-        <input type="button" value="New Game?" class="btn btn-dark">
+        <div class="board flex-container flex-wrap">
+          <div class="box remove-left"></div>
+          <div class="box"></div>
+          <div class="box remove-right"></div>
+        </div>
+        <div class="board flex-container flex-wrap">
+          <div class="box remove-left remove-bottom"></div>
+          <div class="box remove-bottom"></div>
+          <div class="box remove-right remove-bottom"></div>
+        </div>
       </div>
-
-
     </body>
 </html>
