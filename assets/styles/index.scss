@@ -1,6 +1,7 @@
 @import '~bootstrap/scss/bootstrap';
 
 body {
+  margin: 0 auto;
   background-color: black;
   height: 100%;
 }
@@ -40,6 +41,8 @@ body {
   height: 200px;
   width: 200px;
   border: 1px solid white;
+  font-size: 60px
+
 }
 
 .remove-left {

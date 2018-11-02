@@ -15,21 +15,21 @@
 
       <h1 class='game'>Tic Tac Toe</h1>
 
-      <div class="game-board flex-container flex-column flex-center">
+      <div class="game-board flex-container flex-column flex-center" > <!-- data-y is equal to rows and data-x is equal to column -->
         <div class="board flex-container flex-wrap">
-          <div class="box remove-left remove-top"></div>
-          <div class="box remove-top"></div>
-          <div class="box remove-top remove-right"></div>
+          <div class="box flex-container flex-center remove-left remove-top" data-y=0 data-x=0></div>
+          <div class="box flex-container flex-center remove-top" data-y=0 data-x=1></div>
+          <div class="box flex-container flex-center remove-top remove-right" data-y=0 data-x=2></div>
         </div>
         <div class="board flex-container flex-wrap">
-          <div class="box remove-left"></div>
-          <div class="box"></div>
-          <div class="box remove-right"></div>
+          <div class="box flex-container flex-center remove-left" data-y=1 data-x=0></div>
+          <div class="box flex-container flex-center" data-y=1 data-x=1></div>
+          <div class="box flex-container flex-center remove-right" data-y=1 data-x=2></div>
         </div>
         <div class="board flex-container flex-wrap">
-          <div class="box remove-left remove-bottom"></div>
-          <div class="box remove-bottom"></div>
-          <div class="box remove-right remove-bottom"></div>
+          <div class="box flex-container flex-center remove-left remove-bottom" data-y=2 data-x=0></div>
+          <div class="box flex-container flex-center remove-bottom" data-y=2 data-x=1></div>
+          <div class="box flex-container flex-center remove-right remove-bottom" data-y=2 data-x=2></div>
         </div>
       </div>
     </body>
