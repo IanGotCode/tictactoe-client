@@ -55,21 +55,16 @@ $(document).ready(function () {
     }
   })
 
-  function showModal () {
+  function showModal (winner) {
+    messageModal(winner)
     return $('.modal').show()
+  }
+
+  function messageModal (winner) {
+    return $('.modal-title').append(winner)
   }
 
   function hideModal () {
-    $('.btn-secondary').click(function () {
-      return $('.modal').hide()
-    })
-  }
-
-  function showModalTwo () {
-    return $('.modal').show()
-  }
-
-  function hideModalTwo () {
     $('.btn-secondary').click(function () {
       return $('.modal').hide()
     })
@@ -79,15 +74,14 @@ $(document).ready(function () {
   const checkForWinner = function () {
     for (let i = 0; i < waysToWin.length; i++) {
       if (gameBoard[waysToWin[i][0]] === playerOne && gameBoard[waysToWin[i][1]] === playerOne && gameBoard[waysToWin[i][2]] === playerOne) {
-        showModal()
+        showModal('<h5>Player One Wins</h5>')
         gameOver = true
       }
       if (gameBoard[waysToWin[i][0]] === playerTwo && gameBoard[waysToWin[i][1]] === playerTwo && gameBoard[waysToWin[i][2]] === playerTwo) {
-        showModalTwo()
+        showModal('<h5>Player Two Wins</h5>')
         gameOver = true
       }
     }
     hideModal()
-    hideModalTwo()
   }
 })
