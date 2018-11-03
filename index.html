@@ -17,20 +17,40 @@
 
       <div class="game-board flex-container flex-column flex-center" > <!-- data-y is equal to rows and data-x is equal to column -->
         <div class="board flex-container flex-wrap">
-          <div class="box flex-container flex-center remove-left remove-top" data-y=0 data-x=0></div>
-          <div class="box flex-container flex-center remove-top" data-y=0 data-x=1></div>
-          <div class="box flex-container flex-center remove-top remove-right" data-y=0 data-x=2></div>
+          <div id="0" class="box flex-container flex-center remove-left remove-top" data-y=0 data-x=0></div>
+          <div id="1" class="box flex-container flex-center remove-top" data-y=0 data-x=1></div>
+          <div id="2" class="box flex-container flex-center remove-top remove-right" data-y=0 data-x=2></div>
         </div>
         <div class="board flex-container flex-wrap">
-          <div class="box flex-container flex-center remove-left" data-y=1 data-x=0></div>
-          <div class="box flex-container flex-center" data-y=1 data-x=1></div>
-          <div class="box flex-container flex-center remove-right" data-y=1 data-x=2></div>
+          <div id="3" class="box flex-container flex-center remove-left" data-y=1 data-x=0></div>
+          <div id="4" class="box flex-container flex-center" data-y=1 data-x=1></div>
+          <div id="5" class="box flex-container flex-center remove-right" data-y=1 data-x=2></div>
         </div>
         <div class="board flex-container flex-wrap">
-          <div class="box flex-container flex-center remove-left remove-bottom" data-y=2 data-x=0></div>
-          <div class="box flex-container flex-center remove-bottom" data-y=2 data-x=1></div>
-          <div class="box flex-container flex-center remove-right remove-bottom" data-y=2 data-x=2></div>
+          <div id="6" class="box flex-container flex-center remove-left remove-bottom" data-y=2 data-x=0></div>
+          <div id="7" class="box flex-container flex-center remove-bottom" data-y=2 data-x=1></div>
+          <div id="8" class="box flex-container flex-center remove-right remove-bottom" data-y=2 data-x=2></div>
         </div>
       </div>
+
+      <div class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Player One Wins</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              You deserve a cookie.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Ok</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </body>
 </html>
