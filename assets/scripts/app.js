@@ -55,17 +55,39 @@ $(document).ready(function () {
     }
   })
 
+  function showModal () {
+    return $('.modal').show()
+  }
+
+  function hideModal () {
+    $('.btn-secondary').click(function () {
+      return $('.modal').hide()
+    })
+  }
+
+  function showModalTwo () {
+    return $('.modal').show()
+  }
+
+  function hideModalTwo () {
+    $('.btn-secondary').click(function () {
+      return $('.modal').hide()
+    })
+  }
+
   // checking for winner
   const checkForWinner = function () {
     for (let i = 0; i < waysToWin.length; i++) {
       if (gameBoard[waysToWin[i][0]] === playerOne && gameBoard[waysToWin[i][1]] === playerOne && gameBoard[waysToWin[i][2]] === playerOne) {
-        $('.modal').show()
+        showModal()
         gameOver = true
       }
       if (gameBoard[waysToWin[i][0]] === playerTwo && gameBoard[waysToWin[i][1]] === playerTwo && gameBoard[waysToWin[i][2]] === playerTwo) {
-        console.log('winner')
+        showModalTwo()
         gameOver = true
       }
     }
+    hideModal()
+    hideModalTwo()
   }
 })
