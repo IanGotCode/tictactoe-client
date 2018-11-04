@@ -14,6 +14,33 @@
     <body>
 
       <h1 class='game'>Tic Tac Toe</h1>
+      <form id="sign-up" class="border">
+        <fieldset>
+          <legend>Sign Up!</legend>
+          <input type="text" name="credentials[email]" placeholder="Email">
+          <input type="password" name="credentials[password]" placeholder="Password">
+          <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+          <input type="submit" value="Sign Up" class="btn btn-success">
+        </fieldset>
+      </form>
+
+      <form id="sign-in" class="border">
+        <fieldset>
+          <legend>Sign In!</legend>
+          <input type="text" name="credentials[email]" placeholder="Email">
+          <input type="password" name="credentials[password]" placeholder="Password">
+          <input type="submit" value="Sign In" class="btn btn-success">
+        </fieldset>
+      </form>
+
+      <form id="change-password" class="border">
+        <fieldset>
+          <legend>Change Password!</legend>
+          <input type="password" name="password[old]" placeholder="Old Password">
+          <input type="password" name="password[new]" placeholder="New Password">
+          <input type="submit" value="Change Password" class="btn btn-danger">
+        </fieldset>
+      </form>
 
       <div class="game-board flex-container flex-column flex-center" > <!-- data-y is equal to rows and data-x is equal to column -->
         <div class="board flex-container flex-wrap">
@@ -46,10 +73,19 @@
               You deserve a cookie
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Ok</button>
+              <button type="button" class="btn btn-dark" data-dismiss="modal">New Game?</button>
             </div>
           </div>
         </div>
       </div>
+
+      <form id="sign-out" class="border">
+        <fieldset>
+          <legend>Sign Out!</legend>
+          <input type="submit" value="Sign Out" class="btn btn-danger">
+        </fieldset>
+      </form>
+
+
     </body>
 </html>

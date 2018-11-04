@@ -65,7 +65,7 @@ $(document).ready(function () {
   }
 
   function hideModal () {
-    $('.btn-secondary').click(function () {
+    $('.btn-dark').click(function () {
       return $('.modal').hide()
     })
   }
@@ -80,6 +80,9 @@ $(document).ready(function () {
       if (gameBoard[waysToWin[i][0]] === playerTwo && gameBoard[waysToWin[i][1]] === playerTwo && gameBoard[waysToWin[i][2]] === playerTwo) {
         showModal('<h5>Player Two Wins</h5>')
         gameOver = true
+      }
+      if (currentTurn === 9) {
+        showModal('<h5>Tie Game</h5>')
       }
     }
     hideModal()
