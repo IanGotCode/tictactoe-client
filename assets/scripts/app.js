@@ -69,6 +69,11 @@ $(document).ready(function () {
       return $('.modal').hide()
     })
   }
+  function checkForTie () {
+    if (currentTurn === 9) {
+      showModal('<h5>Tie Game</h5>')
+    }
+  }
 
   // checking for winner
   const checkForWinner = function () {
@@ -81,10 +86,8 @@ $(document).ready(function () {
         showModal('<h5>Player Two Wins</h5>')
         gameOver = true
       }
-      if (currentTurn === 9) {
-        showModal('<h5>Tie Game</h5>')
-      }
     }
+    checkForTie()
     hideModal()
   }
 })
