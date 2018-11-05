@@ -13,7 +13,7 @@ const playerTwo = 'O'
 let currentTurn = 1
 const movesMade = 0
 
-const gameBoard = ['', '', '', '', '', '', '', '', '']
+let gameBoard = ['', '', '', '', '', '', '', '', '']
 
 let gameOver = false
 
@@ -33,7 +33,7 @@ $(document).ready(function () {
   // .click function allows clicks between x's and o's from class '.box'
   $('.box').click(function (event) {
     const box = $(event.target)
-    // check to see if there is a value is in any of the boxes.
+    // check to see if there is a value in any of the boxes.
     if (gameOver === false) {
       if (box.text() === '') {
         if (currentTurn % 2 === 1) {
@@ -64,15 +64,26 @@ $(document).ready(function () {
     return $('.modal-title').append(winner)
   }
 
+  // hides the modal after clicking the button
   function hideModal () {
     $('.btn-dark').click(function () {
       return $('.modal').hide()
     })
   }
+
+  // this checks for tie game
   function checkForTie () {
     if (currentTurn === 9) {
       showModal('<h5>Tie Game</h5>')
     }
+  }
+
+  // reset the gameBoard
+  function resetGame () {
+    $('.resetTwo').click(function () {
+      gameBoard = ['', '', '', '', '', '', '', '', '']
+      return $('.box').empty()
+    })
   }
 
   // checking for winner
@@ -89,5 +100,6 @@ $(document).ready(function () {
     }
     checkForTie()
     hideModal()
+    resetGame()
   }
 })
