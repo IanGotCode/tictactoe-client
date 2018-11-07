@@ -10,8 +10,8 @@
 const playerOne = 'X'
 const playerTwo = 'O'
 
-let currentTurn = 1
-const movesMade = 0
+let currentTurn = 0
+// const movesMade = 0
 
 let gameBoard = ['', '', '', '', '', '', '', '', '']
 
@@ -36,20 +36,22 @@ $(document).ready(function () {
     // check to see if there is a value in any of the boxes.
     if (gameOver === false) {
       if (box.text() === '') {
-        if (currentTurn % 2 === 1) {
+        if (currentTurn % 2 === 0) {
           box.html(playerOne)
           // x's being added to gameBoard array
           gameBoard[event.currentTarget.id] = playerOne
           console.log(gameBoard)
           checkForWinner()
           currentTurn++
-        } else if (currentTurn % 2 === 0) {
+          console.log('current turn is ' + currentTurn)
+        } else {
           box.html(playerTwo)
           // y's being added to gameBoard array
           gameBoard[event.currentTarget.id] = playerTwo
           console.log(gameBoard)
           checkForWinner()
           currentTurn++
+          console.log('current turn is ' + currentTurn)
         }
       }
     }
@@ -73,8 +75,10 @@ $(document).ready(function () {
 
   // this checks for tie game
   function checkForTie () {
-    if (currentTurn === 9) {
+    if (currentTurn === 8) {
+      console.log('how many times code run')
       showModal('<h5>Tie Game</h5>')
+      $('.modal-body').text('No cookie for you!')
     }
   }
 
@@ -82,6 +86,9 @@ $(document).ready(function () {
   function resetGame () {
     $('.resetTwo').click(function () {
       gameBoard = ['', '', '', '', '', '', '', '', '']
+      currentTurn = 0
+      gameOver = false
+      console.log(currentTurn)
       return $('.box').empty()
     })
   }
@@ -91,15 +98,18 @@ $(document).ready(function () {
     for (let i = 0; i < waysToWin.length; i++) {
       if (gameBoard[waysToWin[i][0]] === playerOne && gameBoard[waysToWin[i][1]] === playerOne && gameBoard[waysToWin[i][2]] === playerOne) {
         showModal('<h5>Player One Wins</h5>')
+        $('.modal-body').text('You deserve a cookie!')
         gameOver = true
-      }
-      if (gameBoard[waysToWin[i][0]] === playerTwo && gameBoard[waysToWin[i][1]] === playerTwo && gameBoard[waysToWin[i][2]] === playerTwo) {
+        currentTurn = 0
+      } else if (gameBoard[waysToWin[i][0]] === playerTwo && gameBoard[waysToWin[i][1]] === playerTwo && gameBoard[waysToWin[i][2]] === playerTwo) {
         showModal('<h5>Player Two Wins</h5>')
+        $('.modal-body').text('You deserve a cookie!')
         gameOver = true
+        currentTurn = 0
       }
+      hideModal()
     }
     checkForTie()
-    hideModal()
-    resetGame()
   }
+  resetGame()
 })
