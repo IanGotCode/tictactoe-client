@@ -63,6 +63,7 @@ $(document).ready(function () {
   }
 
   function messageModal (winner) {
+    $('.modal-title').empty()
     return $('.modal-title').append(winner)
   }
 
