@@ -47,6 +47,7 @@ $(() => {
         if (box.text() === '') {
           if (currentTurn % 2 === 0) {
             box.html(playerOne)
+            authEvents.updateGame(event.currentTarget.id, playerOne)
             // x's being added to gameBoard array
             gameBoard[event.currentTarget.id] = playerOne
             // console.log(gameBoard)
@@ -56,6 +57,7 @@ $(() => {
           } else {
             box.html(playerTwo)
             // y's being added to gameBoard array
+            authEvents.updateGame(event.currentTarget.id, playerTwo)
             gameBoard[event.currentTarget.id] = playerTwo
             // console.log(gameBoard)
             checkForWinner()

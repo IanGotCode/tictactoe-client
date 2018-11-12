@@ -76,6 +76,10 @@ const createGameSuccess = data => {
   console.log(data.game)
 }
 
+const updateGameSuccess = data => {
+  console.log(data)
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -85,5 +89,6 @@ module.exports = {
   changePasswordFailure,
   signOutSuccess,
   signOutFailure,
-  createGameSuccess
+  createGameSuccess,
+  updateGameSuccess
 }

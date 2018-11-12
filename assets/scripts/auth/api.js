@@ -52,10 +52,33 @@ const createGameAPI = data => {
   })
 }
 
+const updateGameAPI = (targetId, currentPlayer) => {
+  const gameId = store.game.id
+  console.log(targetId, currentPlayer)
+  const data = {
+    'game': {
+      'cell': {
+        'index': targetId,
+        'value': currentPlayer
+      },
+      'over': false
+    }
+  }
+  return $.ajax({
+    url: config.apiUrl + '/games/' + gameId,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
   changePassword,
   signOut,
-  createGameAPI
+  createGameAPI,
+  updateGameAPI
 }

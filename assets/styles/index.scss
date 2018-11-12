@@ -42,7 +42,10 @@ body {
   width: 200px;
   border: 1px solid white;
   font-size: 60px
+}
 
+.box:hover {
+  background-color: grey;
 }
 
 .remove-left {
@@ -59,11 +62,6 @@ body {
 
 .remove-bottom {
   border-bottom: none;
-}
-
-
-.box:hover {
-  background-color: grey;
 }
 
 button {

@@ -46,10 +46,16 @@ const createGame = () => {
     .then(ui.createGameSuccess)
 }
 
+const updateGame = (targetId, currentPlayer) => {
+  api.updateGameAPI(targetId, currentPlayer)
+  // .then(ui.updateGame)
+}
+
 module.exports = {
   onSignUp,
   onSignIn,
   onChangePassword,
   onSignOut,
-  createGame
+  createGame,
+  updateGame
 }
