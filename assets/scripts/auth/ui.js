@@ -25,6 +25,7 @@ const signInSuccess = data => {
   $('#sign-up').hide()
   $('#sign-in').hide()
   $('#change-password').show()
+  $('.resetTwo').show()
   console.log('signInSuccess ran. Data is :', data)
 }
 
@@ -58,6 +59,8 @@ const signOutSuccess = data => {
   $('#sign-in').show()
   $('#sign-up').show()
   $('#sign-out').hide()
+  $('.game-board').hide()
+  $('.resetTwo').hide()
   console.log('signOut ran. Data is :', data)
 }
 

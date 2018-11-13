@@ -14,6 +14,8 @@ $(() => {
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#change-password').on('submit', authEvents.onChangePassword)
   $('#sign-out').on('submit', authEvents.onSignOut)
+  $('.game-board').hide()
+  $('.resetTwo').hide()
 
   // playerOne and playerTwo
   const playerOne = 'X'
@@ -50,19 +52,19 @@ $(() => {
             authEvents.updateGame(event.currentTarget.id, playerOne)
             // x's being added to gameBoard array
             gameBoard[event.currentTarget.id] = playerOne
-            // console.log(gameBoard)
+            console.log(gameBoard)
             checkForWinner()
             currentTurn++
-            // console.log('current turn is ' + currentTurn)
+            console.log('current turn is ' + currentTurn)
           } else {
             box.html(playerTwo)
             // y's being added to gameBoard array
             authEvents.updateGame(event.currentTarget.id, playerTwo)
             gameBoard[event.currentTarget.id] = playerTwo
-            // console.log(gameBoard)
+            console.log(gameBoard)
             checkForWinner()
             currentTurn++
-            // console.log('current turn is ' + currentTurn)
+            console.log('current turn is ' + currentTurn)
           }
         }
       }
@@ -102,6 +104,7 @@ $(() => {
         gameOver = false
         console.log(currentTurn)
         $('.box').empty()
+        $('.game-board').show()
         authEvents.createGame()
       })
     }
