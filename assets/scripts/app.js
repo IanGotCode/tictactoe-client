@@ -52,19 +52,19 @@ $(() => {
             authEvents.updateGame(event.currentTarget.id, playerOne)
             // x's being added to gameBoard array
             gameBoard[event.currentTarget.id] = playerOne
-            console.log(gameBoard)
+            // console.log(gameBoard)
             checkForWinner()
             currentTurn++
-            console.log('current turn is ' + currentTurn)
+            // console.log('current turn is ' + currentTurn)
           } else {
             box.html(playerTwo)
             // y's being added to gameBoard array
             authEvents.updateGame(event.currentTarget.id, playerTwo)
             gameBoard[event.currentTarget.id] = playerTwo
-            console.log(gameBoard)
+            // console.log(gameBoard)
             checkForWinner()
             currentTurn++
-            console.log('current turn is ' + currentTurn)
+            // console.log('current turn is ' + currentTurn)
           }
         }
       }
@@ -90,7 +90,7 @@ $(() => {
     // this checks for tie game
     function checkForTie () {
       if (currentTurn === 8) {
-        console.log('how many times code run')
+        // console.log('how many times code run')
         showModal('<h5>Tie Game</h5>')
         $('.modal-body').text('No cookie for you!')
       }
@@ -102,7 +102,7 @@ $(() => {
         gameBoard = ['', '', '', '', '', '', '', '', '']
         currentTurn = 0
         gameOver = false
-        console.log(currentTurn)
+        // console.log(currentTurn)
         $('.box').empty()
         $('.game-board').show()
         authEvents.createGame()
@@ -116,11 +116,13 @@ $(() => {
           showModal('<h5>Player One Wins</h5>')
           $('.modal-body').text('You deserve a cookie!')
           gameOver = true
+          // console.log(gameOver)
           currentTurn = 0
         } else if (gameBoard[waysToWin[i][0]] === playerTwo && gameBoard[waysToWin[i][1]] === playerTwo && gameBoard[waysToWin[i][2]] === playerTwo) {
           showModal('<h5>Player Two Wins</h5>')
           $('.modal-body').text('You deserve a cookie!')
           gameOver = true
+          // console.log(gameOver)
           currentTurn = 0
         }
         hideModal()
