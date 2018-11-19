@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Tic-Tac-Toe</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+
+      <h1 class='game'>Tic Tac Toe</h1>
+      <form id="sign-up" class="border">
+        <fieldset>
+          <legend>Sign Up!</legend>
+          <input type="text" name="credentials[email]" placeholder="Email">
+          <input type="password" name="credentials[password]" placeholder="Password">
+          <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+          <input type="submit" value="Sign Up" class="btn btn-success">
+        </fieldset>
+      </form>
+
+      <h5 id="message"></h5>
+
+      <form id="sign-in" class="border">
+        <fieldset>
+          <legend>Sign In!</legend>
+          <input type="text" name="credentials[email]" placeholder="Email">
+          <input type="password" name="credentials[password]" placeholder="Password">
+          <input type="submit" value="Sign In" class="btn btn-success">
+        </fieldset>
+      </form>
+
+      <form id="change-password" class="border">
+        <fieldset>
+          <legend>Change Password!</legend>
+          <input type="password" name="passwords[old]" placeholder="Old Password">
+          <input type="password" name="passwords[new]" placeholder="New Password">
+          <input type="submit" value="Change Password" class="btn btn-danger">
+        </fieldset>
+      </form>
+
+      <form id="sign-out" class="border">
+        <fieldset>
+          <legend>Sign Out!</legend>
+          <input type="submit" value="Sign Out" class="btn btn-danger">
+        </fieldset>
+      </form>
+
+      <div class="game-board flex-container flex-column flex-center" > <!-- data-y is equal to rows and data-x is equal to column -->
+        <div class="board flex-container flex-wrap">
+          <div id="0" class="box flex-container flex-center remove-left remove-top" data-y=0 data-x=0></div>
+          <div id="1" class="box flex-container flex-center remove-top" data-y=0 data-x=1></div>
+          <div id="2" class="box flex-container flex-center remove-top remove-right" data-y=0 data-x=2></div>
+        </div>
+        <div class="board flex-container flex-wrap">
+          <div id="3" class="box flex-container flex-center remove-left" data-y=1 data-x=0></div>
+          <div id="4" class="box flex-container flex-center" data-y=1 data-x=1></div>
+          <div id="5" class="box flex-container flex-center remove-right" data-y=1 data-x=2></div>
+        </div>
+        <div class="board flex-container flex-wrap">
+          <div id="6" class="box flex-container flex-center remove-left remove-bottom" data-y=2 data-x=0></div>
+          <div id="7" class="box flex-container flex-center remove-bottom" data-y=2 data-x=1></div>
+          <div id="8" class="box flex-container flex-center remove-right remove-bottom" data-y=2 data-x=2></div>
+        </div>
+      </div>
+
+      <div class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title"></h5>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-dark reset" data-dismiss="modal">Ok!</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <button class="btn btn-dark resetTwo">New Game?</button>
+      </div>
+
+    </body>
+</html>
